@@ -3,11 +3,81 @@
   <head>
     <meta charset="utf-8">
     <title>Media Player Vanilla JS</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
-    <h1>Media Player Vanilla JS</h1>
+    <div class="container">
+      <main>
+        <div id="player-container">
+          <div id="player" class="row">
+            <div id="playlist" class="col">
+              <div class="items"></div>
+              <button class="add-button">Agregar Medio</button>
+            </div>
+            <div id="media" class="col">
+              <video id="video-player" width="100%" poster="./images/poster.png">
+                <source>
+              </video>
+            </div>
+          </div>
+          <div id="controls" class="row">
+            <div class="progress-bar">
+              <div class="progress-indicator"></div>
+            </div>
+            <div class="buttons">
+              <div class="left-buttons">
+                <div class="toggle-playlist">
+                  <i class="fa fa-list-ul"></i>
+                </div>
+                <div class="prev">
+                  <i class="fa fa-step-backward"></i>
+                </div>
+                <div class="play">
+                  <i class="fa fa-play"></i>
+                </div>
+                <div class="next">
+                  <i class="fa fa-step-forward"></i>
+                </div>
+              </div>
+              <div class="right-buttons">
+                <div class="volumen">
+                  <i class="fa fa-volume-up"></i>
+                  <!-- <i class="fa fa-volume-down"></i>
+                  <i class="fa fa-volume-off"></i> -->
+                </div>
+                <div class="fullscreen">
+                  <i class="fa fa-expand"></i>
+                  <!-- <i class="fa fa-compress"></i> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
 
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <div class="modal-content">
+          <form id="add-media-form">
+            <div class="field">
+              <input type="text" name="name" placeholder="Nombre del medio" required>
+            </div>
+
+            <div class="field">
+              <input type="text" name="source" placeholder="Url del medio" required>
+            </div>
+
+            <div class="field">
+              <button type="submit">Aceptar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
     <script src='./bundle.js'></script>
   </body>
 </html>
