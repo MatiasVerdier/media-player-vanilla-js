@@ -108,9 +108,9 @@ togglePlaylist.addEventListener('click', () => {
   events.emit('togglePlaylist', !isVisible)
 })
 
-progressBar.addEventListener('click', (event) => {
+progressBar.addEventListener('click', function (event) {
   if (video.src) {
-    let progress = (event.clientX - event.target.offsetLeft) / event.target.offsetWidth * 100
+    let progress = event.offsetX / this.offsetWidth * 100
     events.emit('moveProgress', progress)
   }
 })
